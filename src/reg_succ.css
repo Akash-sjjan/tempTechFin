@@ -1,0 +1,95 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+.reg-suc-container {
+  width: 100%;
+  background-color: #f7f7f7;
+  /* padding-left: 17%;
+  padding-right: 17%; */
+}
+.reg-suc-container-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 17%;
+  padding-right: 17%;
+}
+
+.reg-suc-img-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  margin-top: 5em;
+}
+.reg-suc-img-c img {
+  width: 5vw;
+}
+.reg-suc-title-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reg-suc-title {
+  margin: 0px;
+  margin-top: 2em;
+  font-family: "Inter";
+  font-size: 2vw;
+  font-weight: bold;
+  color: red;
+}
+
+.reg-suc-sub-title {
+  margin: 0px;
+  margin-top: 1em;
+  font-family: "Inter";
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: black;
+}
+.reg-suc-hor-line {
+  border-width: 1px;
+  border-color: #f7f7f7;
+  width: 100%;
+  opacity: 1;
+  margin-top: 3em;
+}
+
+.reg-suc-btn-c {
+  margin-top: 3em;
+}
+.reg-suc-back-btn {
+  width: 13em;
+  height: 3.5em;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: red;
+  margin-right: 0.8em;
+  border-radius: 3em;
+  color: black;
+  font-family: "Inter";
+  font-size: 0.8vw;
+  font-weight: normal;
+}
+
+.reg-suc-next-btn {
+  width: 13em;
+  height: 3.5em;
+  background-color: red;
+  border-width: 1px;
+  border-color: red;
+  margin-left: 0.8em;
+  border-radius: 3em;
+  color: white;
+  font-family: "Inter";
+  font-size: 0.8vw;
+  font-weight: normal;
+}

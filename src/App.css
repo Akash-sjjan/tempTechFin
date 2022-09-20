@@ -1,0 +1,204 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+.MuiAccordion-root:before {
+  height: 0px;
+  width: 0px;
+}
+
+
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+/* a[href^="https://maps.google.com/maps"]{display:none !important} */
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+.prl-input-cc {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.prl-input-cc-message{
+  display: flex;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.prl-input-left {
+  position: relative;
+  width: 100%;
+  margin-right: 1em;
+}
+.prl-input-message {
+  position: relative;
+  width: 100%;
+  margin-right: 0em;
+}
+.prl-input-lable {
+  display: flex;
+  font-size: 0.9em;
+  font-weight: 600;
+  font-family: "Inter";
+  margin-bottom: 0.7em;
+  color: rgba(51, 51, 51, 1);
+}
+.prl-input-dd {
+  position: relative;
+}
+.prl-input-dd-s {
+  width: 100%;
+  height: 3.5rem;
+  background: white;
+  color: #a8a8a8;
+  cursor: pointer;
+  border: 1px solid #c7c7c7;
+  padding-left: 1.5em;
+  font-size: 0.8em;
+  font-family: "Inter";
+  border-radius: 0.5em;
+}
+.prl-input-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2em;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 0.2em;
+  margin-right: 0.2em;
+  pointer-events: none;
+}
+.prl-input-right {
+  position: relative;
+  width: 100%;
+  margin-left: 1em;
+}
+.prl-input {
+  width: 100%;
+  height: 3.5rem;
+  box-sizing: border-box;
+  background: white;
+  color: #a8a8a8;
+  cursor: pointer;
+  border: 1px solid #c7c7c7;
+  padding-left: 1.3em;
+  font-size: 0.8em;
+  font-family: "Inter";
+  border-radius: 0.5em;
+}
+::-webkit-calendar-picker-indicator {
+  width: 2em;
+  height: 50%;
+  margin-right: 0.4em;
+}
+.prl-input:focus::placeholder {
+  color: transparent;
+}
+.prl-input-message{
+  height: 100%
+}
+/* ************************************************************** */
+
+.TL-sec-2-c {
+  display: flex;
+  flex-direction: row;
+  padding-left: 17%;
+  padding-right: 17%;
+  margin-top: 8vw;
+  background-color: #ff0000;
+  position: relative;
+  height: 25vw;
+}
+
+.TL-sec-2-txt {
+  margin-top: 2vw;
+}
+
+.TL-sec-2-title p {
+  color: #333333;
+  font-size: 1.8vw;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.TL-sec-2-txt-subtxt {
+  display: flex;
+  align-items: center;
+  margin-top: 0vw;
+}
+
+.TL-sec-2-txt-s {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 1.8vw;
+  height: 1.8vw; */
+}
+.TL-sec-2-txt-s img{
+ width: 1vw;
+  /* width: 1.8vw;
+  height: 1.8vw; */
+}
+.TL-sec-2-txt-s p {
+  color: #333333;
+  font-family: "Inter";
+  font-weight: 600;
+  margin: 0px;
+  font-size: 1vw;
+}
+
+.TL-sec-2-txt-t {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1vw;
+  margin-left: 1em;
+  color: #181617;
+}
+.TL-sec-2-img {
+  background: linear-gradient(45deg, #dd8f1e 12%, transparent 12%);
+  padding: 0.4vw;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -2.5vw;
+  right: 17vw;
+}
+.TL-sec-2-img img {
+  height: 100%;
+  width: 32vw;
+  object-fit: cover;
+  border-radius: 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .prl-input-cc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0em;
+  } 
+  .prl-input-left {
+    width: 100%;
+    margin-right: 0em;
+    margin-bottom: 1em;
+  }
+  .prl-input-right {
+    width: 100%;
+    margin-left: 0em;
+    margin-bottom: 1em;
+  }
+}
