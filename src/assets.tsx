@@ -1,0 +1,22 @@
+export const freetag = require("./assets/freetag.png");
+export const calender = require("./assets/calender.png");
+export const twomembers = require("./assets/twomembers.png");
+export const book = require("./assets/book.png");
+export const girllaptop = require("./assets/girllaptop.png");
+export const boylaptop = require("./assets/boylaptop.png");
+export const boyphone = require("./assets/boyphone.png");
+export const InstructorPic = require("./assets/InstructorPic.png");
+export const syllabusIcon = require("./assets/syllabusIcon.png");
+export const back = require("./assets/back.png");
+export const next = require("./assets/next.png");
+export const fastback = require("./assets/fastback.png");
+export const fastforward = require("./assets/fastforward.png");
+export const dropdown = require("./assets/dropdown.png");
+export const contactUsSec2Img = require("./assets/contactUsSec2Img.png");
+export const contactusPhone = require("./assets/contactusPhone.png");
+export const contactUsLoc = require("./assets/contactUsLoc.png");
+export const contactUsEmail = require("./assets/contactUsEmail.png");
+export const contactUsExpand = require("./assets/contactUsExpand.png");
+export const contactUsCollapse = require("./assets/contactUsCollapse.png");
+
+// export const tickmark = require("../assets/tickmark.png");
