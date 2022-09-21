@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { createStyles, withStyles, Theme } from "@material-ui/core/styles";
 import './App.css'
-import { contactUsSec2Img, dropdown, contactUsLoc, contactUsEmail, contactusPhone } from "./assets";
+import { contactusPhone, contractTeacherDp, dashArrowActive, dashArrowInactive, girllaptop } from "./assets";
+import DashNav from "./DashNav";
+import NextClassNotification from "./NextClassNotification";
+import DashAdvartiseCard from "./DashAdvartiseCard";
 import { Button } from "@material-ui/core";
-import ContactUsMap from "./ContactUsMap";
-import ContactUsAccords from "./ContactUsAccords";
+
 
 interface Props {
   classes: any;
@@ -14,69 +16,151 @@ interface States { }
 const styles = (theme: Theme) =>
   createStyles({
     root: {},
-    contactUs: {
-
+    add_contract_container: {
+      paddingLeft: '13vw',
+      paddingRight: '13vw',
+      paddingTop: '3vw',
+      display: 'flex'
     },
-    contactUs_sec_2_c: {
-      backgroundColor: '#f7f7f7',
-      paddingLeft: '17%',
-      paddingRight: '17%',
-
+    dash_left_c: {
+      flex: 2
     },
-    contactUs_sec_2_title: {
+    add_contract_cc: {
+      width: '100%',
+      marginLeft: '2vw',
+      flex: 8,
+    },
+    add_contract_Hr: {
+      borderBottom: '0.5px solid #e4e4e5'
+    },
+    add_contract_title: {
+      color: '#14292d',
+      fontFamily: 'Inter',
+      fontWeight: 600,
+      fontSize: '1.55vw',
+      margin: '0px',
+      marginBottom: '1vw'
+    },
+    add_contract_card_c: {
+      boxShadow: '0px 5px 30px rgba(0,0,0,0.05)',
+      borderRadius: '1vw',
+      padding: '2vw',
+      marginTop: '2vw'
+    },
+    add_contract_card_row_1: {
+      display: 'flex',
+      justifyContent: 'space-between'
+    },
+    add_contract_card_row_1_sec_1: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    add_contract_card_row_1_sec_1_img: {
+      width: '4vw',
+      height: '4vw',
+      objectFit: 'cover',
+      borderRadius: '50%'
+    },
+    add_contract_card_row_1_sec_1_name: {
       color: '#333333',
       fontFamily: 'Inter',
       fontWeight: 600,
-      fontSize: '1.7vw',
-      paddingTop: '2vw'
+      fontSize: '1.2vw',
+      marginLeft: '1vw'
     },
-    CONTACT_sub_c: {
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center'
-    },
-    CONTACT_sub_btn: {
-      backgroundColor: '#ff0000',
-      borderRadius: '10em',
-      width: '15vw',
-      height: '2.8vw',
-      marginBottom: '6vw',
-      color: '#ffffff',
+    add_contract_card_row_1_sec_1_stat_c: {
+      color: "#181617",
       fontFamily: 'Inter',
-      fontSize: '0.8vw',
-      fontWeight: 700,
-      textTransform: 'none'
+      fontWeight: 500,
+      fontSize: '0.85vw'
     },
-    contactUs_sec_3_c: {
+    add_contract_card_row_1_sec_1_stat: {
+      color: "#6f924a",
+      fontFamily: 'Inter',
+      fontWeight: 500,
+      fontSize: '0.85vw'
+    },
+    add_contract_card_row_2: {
       display: 'flex',
-      flexDirection: 'row',
-      paddingLeft: '17%',
-      paddingRight: '17%',
-      // marginTop: '8vw',
-      backgroundColor: '#ffffff',
-      position: 'relative',
-      height: '25vw'
+      justifyContent: 'space-between',
+      marginTop: '1.5vw'
     },
-    contactUs_sec_4_c: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginBottom: '4vw',
-      background: "linear-gradient(#14292d 50%, #ffffff 0%)",
-    },
-    contactUs_sec_4_Map_c: {
-      width: '66vw', height: '22vw'
-    },
-    contactUs_sec_4_title: {
-      color: '#ffffff',
+    add_contract_card_row_2_tit: {
+      margin: '0px',
+      color: '#ff0000',
       fontFamily: 'Inter',
       fontWeight: 600,
-      fontSize: '2vw',
-      marginTop: '3vw',
-      marginBottom: '3vw'
+      fontSize: '1vw'
     },
-
+    add_contract_card_row_2_tit_tit: {
+      margin: '0px',
+      marginTop: '0.7vw',
+      color: '#181617',
+      fontFamily: 'Inter',
+      fontWeight: 400,
+      fontSize: '0.85vw'
+    },
+    add_contract_card_row_3: {
+      marginTop: '1.5vw',
+      marginBottom: '1.5vw'
+    },
+    add_contract_card_row_3_btn: {
+      borderColor: "#ff4452",
+      borderWidth: '2px',
+      borderRadius: '10em',
+      color: '#333333',
+      fontFamily: 'Inter',
+      fontWeight: 600,
+      fontSize: '0.7vw',
+      textTransform: 'none',
+      paddingLeft: '1vw',
+      paddingRight: '1vw',
+      '&:hover': {
+        backgroundColor: 'transparent'
+      },
+    },
+    add_contract_card_row_4: {
+      marginTop: '1.5vw',
+    },
+    add_contract_card_row_4_btn1: {
+      backgroundColor: '#ff0000',
+      borderRadius: '10em',
+      textTransform: 'none',
+      paddingLeft: '1vw',
+      paddingRight: '1vw',
+      marginRight: '1vw',
+      color: '#ffffff',
+      fontWeight: 500,
+      fontFamily: 'Inter',
+      fontSize: '0.7vw',
+      '&:hover': {
+        backgroundColor: '#ff0000'
+      },
+    },
+    add_contract_card_row_4_btn2_inactive: {
+      backgroundColor: '#f0d17c',
+      borderRadius: '10em',
+      textTransform: 'none',
+      paddingLeft: '1vw',
+      paddingRight: '1vw',
+      color: '#333333',
+      fontWeight: 600,
+      fontFamily: 'Inter',
+      fontSize: '0.7vw',
+      '&:hover': {
+        backgroundColor: '#f0d17c'
+      },
+    },
+    add_contract_details_cc: {
+      marginTop: '4vw'
+    },
+    add_contract_details_title: {
+      color: '#333333',
+      fontFamily: 'Inter',
+      fontSize: '1.2vw',
+      fontWeight: 600
+    }
   });
 // Customizable Area End
 
@@ -94,240 +178,76 @@ class App extends Component<Props, States> {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.contactUs}>
-        <div className={classes.contactUs_sec_2_c}>
-          <p className={classes.contactUs_sec_2_title}>Send Us a Message</p>
-          <div className="prl-input-cc">
-            <div className="prl-input-left">
-              <label className="prl-input-lable">
-                I am a<sup className="required">*</sup>
-              </label>
-              <div className="prl-input-dd">
-                <select
-                  className="prl-input-dd-s"
-                  defaultValue="learner"
-                  onChange={(e) => {
-                    // this.handleCountryChange(e);
-                  }}
-                // style={this.state.errCountry ? this.errStyle : {}}
-                >
-                  <option value="learner" data-key="Empty">
-                    Learner
-                  </option> <option value="teacher" data-key="Empty">
-                    Teacher
-                  </option>
-                  {/* {this.state.listCountry.map((val, key) => {
-                            return (
-                              <option
-                                value={key}
-                                key={key}
-                                data-key={val.isoCode}
-                                a-key={val.isoCode}
-                              >
-                                {val.name}
-                              </option>
-                            );
-                          })} */}
-                </select>
-                <span
-                  className="prl-input-arrow"
-                // style={
-                //   this.state.errCountry
-                //     ? { backgroundColor: "#fcecec" }
-                //     : {}
-                // }
-                >
-                  <img src={dropdown} alt="arrow" />
-                </span>
-                {/* {this.state.errCountry ? (
-                          <p className="prl-input-err-txt">
-                            Please select a value.
-                          </p>
-                        ) : (
-                          <></>
-                        )} */}
+      <div className={classes.add_contract_container}>
+        <div className={classes.dash_left_c}>
+          <DashNav active="HireATeacher" styles={{ marginBottom: '1.5vw' }} />
+          <NextClassNotification
+            timings="10:00 AM - 11:00 PM"
+            title="Introduction to foundation of digital marketing and e-commerce"
+            subtitle=" Lorem Ipsum is simply dummy text of the printing"
+            onClick={() => { console.log("Next Class") }}
+            styles={{ marginBottom: '1.5vw' }}
+          />
+          <DashAdvartiseCard
+            title="One on One classes with Teachers"
+            subtitle="Lorem Ipsum is simply dummy text of the printing"
+            styles={{}}
+            onClick={() => { }}
+          />
+        </div>
+        <div className={classes.add_contract_cc}>
+          <p className={classes.add_contract_title}>Candidate Details</p>
+          <div className={classes.add_contract_Hr} />
+          <div className={classes.add_contract_card_c}>
+            <div className={classes.add_contract_card_row_1}>
+              <div className={classes.add_contract_card_row_1_sec_1}>
+                <img src={contractTeacherDp} alt="" className={classes.add_contract_card_row_1_sec_1_img} />
+                <p className={classes.add_contract_card_row_1_sec_1_name}>Ajit Wadora</p>
+              </div>
+              <div className={classes.add_contract_card_row_1_sec_1}>
+                <p className={classes.add_contract_card_row_1_sec_1_stat_c}>Status:&nbsp;&nbsp;</p>
+                <p className={classes.add_contract_card_row_1_sec_1_stat}>Accepted</p>
               </div>
             </div>
-            <div className="prl-input-right">
-              <label className="prl-input-lable">
-                What can we help you with<sup className="required">*</sup>
-              </label>
-              <div className="prl-input-dd">
-                <select
-                  className="prl-input-dd-s"
-                  defaultValue="Please Select"
-                  onChange={(e) => {
-                    // this.handleStateChange(e);
-                  }}
-                // style={this.state.errState ? this.errStyle : {}}
-                >
-                  <option value="Please Select">Please Select</option>
-                  {/* {this.state.listState.map((val, key) => {
-                            return (
-                              <option value={key} key={key}>
-                                {val.name}
-                              </option>
-                            );
-                          })} */}
-                </select>
-                <span
-                  className="prl-input-arrow"
-                // style={
-                //   this.state.errState
-                //     ? { backgroundColor: "#fcecec" }
-                //     : {}
-                // }
-                >
-                  <img src={dropdown} alt="arrow" />
-                </span>
-                {/* {this.state.errState ? (
-                          <p className="prl-input-err-txt">
-                            Please select a value.
-                          </p>
-                        ) : (
-                          <></>
-                        )} */}
+            <div className={classes.add_contract_card_row_2}>
+              <div>
+                <p className={classes.add_contract_card_row_2_tit}>Experience</p>
+                <p className={classes.add_contract_card_row_2_tit_tit}>2-3 years</p>
+              </div>
+              <div>
+                <p className={classes.add_contract_card_row_2_tit}>Qualification</p>
+                <p className={classes.add_contract_card_row_2_tit_tit}>Post Graduate</p>
+              </div>
+              <div>
+                <p className={classes.add_contract_card_row_2_tit}>Specialization</p>
+                <p className={classes.add_contract_card_row_2_tit_tit}>English</p>
+              </div>
+              <div>
+                <p className={classes.add_contract_card_row_2_tit}>Languages</p>
+                <p className={classes.add_contract_card_row_2_tit_tit}>English, Hindi</p>
+              </div>
+              <div>
+                <p className={classes.add_contract_card_row_2_tit}>Availability</p>
+                <p className={classes.add_contract_card_row_2_tit_tit}>After 1 week</p>
               </div>
             </div>
-          </div>
-          <div className="prl-input-cc">
-            <div className="prl-input-left">
-              <label className="prl-input-lable">
-                Your Name<sup className="required">*</sup>
-              </label>
-              <input
-                className="prl-input"
-                type="text"
-                value=''
-                required
-                onChange={(e) => {
-                  // this.handleFNameChange(e);
-                }}
-                placeholder="Enter Name"
-              // style={this.state.errFName ? this.errStyle : {}}
-              />
-              {/* {this.state.errFName ? (
-                        <p className="prl-input-err-txt">
-                          Please enter a value.{" "}
-                        </p>
-                      ) : (
-                        <></>
-                      )} */}
-              {/* {this.state.errMaxFName ? (
-                        <p className="prl-input-err-txt">
-                          Maximum 15 characters
-                        </p>
-                      ) : (
-                        <></>
-                      )} */}
+            <div className={classes.add_contract_card_row_3}>
+              <Button variant='outlined' className={classes.add_contract_card_row_3_btn}>Download Resume</Button>
             </div>
-            <div className="prl-input-right">
-              <label className="prl-input-lable">
-                Email<sup className="required">*</sup>
-              </label>
-              <input
-                className="prl-input"
-                type="email"
-                value=''
-                required
-                onChange={(e) => {
-                  // this.handleLNameChange(e);
-                }}
-                placeholder="email@gmail.com"
-              // style={this.state.errLName ? this.errStyle : {}}
-              />
-              {/* {this.state.errLName ? (
-                        <p className="prl-input-err-txt">
-                          Please enter a value.{" "}
-                        </p>
-                      ) : (
-                        <></>
-                      )} */}
-              {/* {this.state.errMaxLName ? (
-                        <p className="prl-input-err-txt">
-                          Maximum 15 characters
-                        </p>
-                      ) : (
-                        <></>
-                      )} */}
+            <div className={classes.add_contract_Hr} />
+            <div className={classes.add_contract_card_row_4}>
+              <Button variant='contained' className={classes.add_contract_card_row_4_btn1}>Send Message</Button>
+              <Button variant='contained' className={classes.add_contract_card_row_4_btn2_inactive}>Add Contract Info</Button>
             </div>
           </div>
-          <div className="prl-input-cc-message">
-            <div className="prl-input-message">
-              <label className="prl-input-lable">
-                Your Message<sup className="required">*</sup>
-              </label>
-              <textarea
-                className="prl-input prl-input-message"
-                value=''
-                required
-                onChange={(e) => {
-                  // this.handleFNameChange(e);
-                }}
-                placeholder="Enter Details"
-                cols={10}
-                rows={10}
-              // style={this.state.errFName ? this.errStyle : {}}
-              />
-              {/* {this.state.errFName ? (
-                        <p className="prl-input-err-txt">
-                          Please enter a value.{" "}
-                        </p>
-                      ) : (
-                        <></>
-                      )} */}
-              {/* {this.state.errMaxFName ? (
-                        <p className="prl-input-err-txt">
-                          Maximum 15 characters
-                        </p>
-                      ) : (
-                        <></>
-                      )} */}
+          <div className={classes.add_contract_details_cc}>
+            <p className={classes.add_contract_details_title}>Contract Info</p>
+            <div>
+              <p>aa</p>
             </div>
+          </div>
+        </div>
 
-          </div>
-          <div className={classes.CONTACT_sub_c}>
-            <Button className={classes.CONTACT_sub_btn} variant="contained">Submit</Button>
-          </div>
-        </div>
-        <div className={classes.contactUs_sec_3_c}>
-
-          <div className="TL-sec-2-txt">
-            <div className="TL-sec-2-title">
-              <p>Keep in touch with us</p>
-            </div>
-            <div className="TL-sec-2-sub-c">
-              <div className="TL-sec-2-txt-subtxt">
-                <div className="TL-sec-2-txt-s">
-                  <img src={contactUsLoc} alt='' />
-                </div>
-                <p className="TL-sec-2-txt-t">Lorem Ipsum, Dolor Amet, Worli - Bumbai, India 000</p>
-              </div>
-              <div className="TL-sec-2-txt-subtxt">
-                <div className="TL-sec-2-txt-s">
-                  <img src={contactUsEmail} alt='' />
-                </div>
-                <p className="TL-sec-2-txt-t">email@gmail.com</p>
-              </div>
-              <div className="TL-sec-2-txt-subtxt">
-                <div className="TL-sec-2-txt-s">
-                  <img src={contactusPhone} alt='' />
-                </div>
-                <p className="TL-sec-2-txt-t">+91123458645</p>
-              </div>
-            </div>
-          </div>
-          <div className="TL-sec-2-img">
-            <img src={contactUsSec2Img} alt="img" />
-          </div>
-        </div>
-        <div className={classes.contactUs_sec_4_c}>
-          <p className={classes.contactUs_sec_4_title}>View us on Map</p>
-          <div className={classes.contactUs_sec_4_Map_c} >
-            <ContactUsMap />
-          </div>
-        </div>
-        <ContactUsAccords />
       </div>
     );
   }

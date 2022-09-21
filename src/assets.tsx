@@ -18,5 +18,9 @@ export const contactUsLoc = require("./assets/contactUsLoc.png");
 export const contactUsEmail = require("./assets/contactUsEmail.png");
 export const contactUsExpand = require("./assets/contactUsExpand.png");
 export const contactUsCollapse = require("./assets/contactUsCollapse.png");
+export const dashArrowInactive = require("./assets/dashArrowInactive.png");
+export const dashArrowActive = require("./assets/dashArrowActive.png");
+export const DashAdImg = require("./assets/DashAdImg.png");
+export const contractTeacherDp = require("./assets/contractTeacherDp.png");
 
 // export const tickmark = require("../assets/tickmark.png");
