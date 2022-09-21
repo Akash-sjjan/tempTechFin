@@ -28,7 +28,7 @@ const styles = (theme: Theme) =>
     add_contract_cc: {
       width: '100%',
       marginLeft: '2vw',
-      flex: 8,
+      flex: 7.5,
     },
     add_contract_Hr: {
       borderBottom: '0.5px solid #e4e4e5'
