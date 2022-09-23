@@ -9,6 +9,7 @@ import { Button } from "@material-ui/core";
 import { MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker } from "@material-ui/pickers";
 import Timers from "./Timers";
 import ContractInfo from "./ContractInfo";
+import AddContractsuccess from "./AddContractsuccess";
 
 interface Props {
   classes: any;
@@ -259,8 +260,13 @@ class App extends Component<Props, States> {
           </div>
           <div className={classes.add_contract_details_cc}>
             <p className={classes.add_contract_details_title}>Contract Info</p>
+            {/* 
             <div>
               <ContractInfo startTime={this.startTime} endTime={this.endTime} />
+            </div> 
+            */}
+            <div>
+              <AddContractsuccess />
             </div>
           </div>
           {/* <iframe src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" title="description"></iframe> */}
