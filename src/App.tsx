@@ -7,7 +7,6 @@ import NextClassNotification from "./NextClassNotification";
 import DashAdvartiseCard from "./DashAdvartiseCard";
 import { Button } from "@material-ui/core";
 import { MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker } from "@material-ui/pickers";
-import TimeSet from "./TimeSet";
 import Timers from "./Timers";
 import ContractInfo from "./ContractInfo";
 
